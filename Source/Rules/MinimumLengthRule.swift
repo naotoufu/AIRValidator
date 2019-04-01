@@ -16,6 +16,6 @@ public struct MinimumLengthRule: Rule {
     
     public func validate<T>(_ value: T) -> Bool {
         guard let value = value as? String else { return false }
-        return value.characters.count >= Int(self.length)
+        return value.count >= Int(self.length)
     }
 }
